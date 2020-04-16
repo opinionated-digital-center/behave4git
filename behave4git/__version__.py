@@ -2,4 +2,4 @@
 # Do not edit manually
 """Version module for behave4git."""
 
-__version__ = "0.0.0"
+__version__ = "0.1.0"
