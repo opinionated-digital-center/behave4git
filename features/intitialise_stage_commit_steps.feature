@@ -11,7 +11,7 @@ Feature: Git steps reused throughout the features
             foo bar
             """
         And I add the file "foo_file" to the git index
-        Then the file "foo_file" should have been staged
+        Then the file "foo_file" should be staged
 
     Scenario: Commit files
         Given an empty git repo
@@ -25,8 +25,8 @@ Feature: Git steps reused throughout the features
             """
             chore: initial commit
             """
-        And 1 files should have been committed in the last commit
-        And the file "initial_commit_file" should have been committed in the last commit
+        And 1 files should be committed in the last commit
+        And the file "initial_commit_file" should be committed in the last commit
 
     Scenario: Create a starting repo step
         Given a starting git repo
@@ -40,5 +40,5 @@ Feature: Git steps reused throughout the features
             """
             chore: initial commit
             """
-        And 1 files should have been committed in the last commit
-        And the file "initial_commit_file" should have been committed in the last commit
+        And 1 files should be committed in the last commit
+        And the file "initial_commit_file" should be committed in the last commit
