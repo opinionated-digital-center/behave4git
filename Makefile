@@ -320,6 +320,14 @@ tox-bdd:
 # docs
 #################################################################
 
+docs:
+	poetry run sphinx-apidoc -o docs/ $(PACKAGE_DIR)
+	$(MAKE) -C docs clean
+	$(MAKE) -C docs html
+
+docs-pdf:
+	$(MAKE) -C docs latexpdf
+
 tox-docs:
 	poetry run tox -e docs
 	$(BROWSER) docs/_build/html/index.html
