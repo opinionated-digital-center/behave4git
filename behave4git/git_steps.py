@@ -59,15 +59,15 @@ def step_current_commit_message_should_be(context):
     assert_that(context.repo.head.commit.message, equal_to(context.text))
 
 
-@then("{count:d} files should have been committed in the last commit")
-def step_x_files_should_have_been_committed_in_last_commit(context, count):
+@then("{count:d} files should be committed in the last commit")
+def step_x_files_should_be_committed_in_last_commit(context, count):
     assert_that(
         len(files_committed_in_commit(context.repo.head.commit)), equal_to(count)
     )
 
 
-@then('the file "{filepath}" should have been committed in the last commit')
-def step_file_should_have_been_committed_in_last_commit(context, filepath):
+@then('the file "{filepath}" should be committed in the last commit')
+def step_file_should_be_committed_in_last_commit(context, filepath):
     assert_that(files_committed_in_commit(context.repo.head.commit), has_item(filepath))
 
 
@@ -84,8 +84,8 @@ def step_commit_index_with_message(context, message):
     context.repo.index.commit(message)
 
 
-@then('the file "{filepath}" should have been staged')
-def step_file_should_have_been_staged(context, filepath):
+@then('the file "{filepath}" should be staged')
+def step_file_should_be_staged(context, filepath):
     assert_that(
         [
             d.a_path
