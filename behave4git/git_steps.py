@@ -75,15 +75,18 @@ def step_file_should_be_committed_in_last_commit(context, filepath):
 # STEPS: Index
 # -----------------------------------------------------------------------------
 @given('I add the file "{filepath}" to the git index')
+@given('I stage the file "{filepath}"')
 def step_add_file_to_index(context, filepath):
     context.repo.index.add(filepath)
 
 
 @given('I commit the git index with message "{message}"')
+@given('I commit the staged files with message "{message}"')
 def step_commit_index_with_message(context, message):
     context.repo.index.commit(message)
 
 
+@then('the file "{filepath}" should be in the git index')
 @then('the file "{filepath}" should be staged')
 def step_file_should_be_staged(context, filepath):
     assert_that(
