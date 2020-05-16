@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/opinionated-digital-center/behave4git/compare/v0.1.1...v0.2.0) (2020-05-16)
+
+
+### Features
+
+* add supplementary wording to index related steps ([5c998e1](https://github.com/opinionated-digital-center/behave4git/commit/5c998e1e80375878c1ed5ca744bd71834b5de35e))
+
 ## [0.1.1](https://github.com/opinionated-digital-center/behave4git/compare/v0.1.0...v0.1.1) (2020-05-07)
 
 
