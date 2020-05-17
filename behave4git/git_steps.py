@@ -90,12 +90,7 @@ def step_commit_index_with_message(context, message):
 @then('the file "{filepath}" should be staged')
 def step_file_should_be_staged(context, filepath):
     assert_that(
-        [
-            d.a_path
-            for d in list(
-                context.repo.index.diff(context.repo.head.commit).iter_change_type("D")
-            )
-        ],
+        [d.a_path for d in context.repo.index.diff(context.repo.head.commit)],
         has_item(filepath),
     )
 
