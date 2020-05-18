@@ -1,3 +1,15 @@
+# [0.3.0](https://github.com/opinionated-digital-center/behave4git/compare/v0.2.0...v0.3.0) (2020-05-18)
+
+
+### Bug Fixes
+
+* correct should be staged step to include all staged files ([3d68fd4](https://github.com/opinionated-digital-center/behave4git/commit/3d68fd400b36d15a1e791efdbff819e310819541))
+
+
+### Features
+
+* add more stage steps and tracked steps ([13c9c6a](https://github.com/opinionated-digital-center/behave4git/commit/13c9c6a0102f7d50200aee35c6ecd28aa2dbf7fd))
+
 # [0.2.0](https://github.com/opinionated-digital-center/behave4git/compare/v0.1.1...v0.2.0) (2020-05-16)
 
 
