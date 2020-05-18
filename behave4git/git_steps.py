@@ -90,9 +90,65 @@ def step_commit_index_with_message(context, message):
 @then('the file "{filepath}" should be staged')
 def step_file_should_be_staged(context, filepath):
     assert_that(
-        [d.a_path for d in context.repo.index.diff(context.repo.head.commit)],
+        [d.a_path for d in context.repo.index.diff("HEAD")], has_item(filepath),
+    )
+
+
+@then('the file "{filepath}" should not be in the git index')
+@then('the file "{filepath}" should not be staged')
+def step_file_should_not_be_staged(context, filepath):
+    assert_that(
+        [d.a_path for d in context.repo.index.diff("HEAD")], not_(has_item(filepath)),
+    )
+
+
+@then('the file "{filepath}" should be in the git index as added')
+@then('the file "{filepath}" should be staged as added')
+def step_file_should_be_staged_as_added(context, filepath):
+    file_should_be_staged_with_change_type(context, filepath, "D")
+
+
+@then('the file "{filepath}" should be in the git index as deleted')
+@then('the file "{filepath}" should be staged as deleted')
+def step_file_should_be_staged_as_deleted(context, filepath):
+    file_should_be_staged_with_change_type(context, filepath, "A")
+
+
+@then('the file "{filepath}" should be in the git index as renamed')
+@then('the file "{filepath}" should be staged as renamed')
+@then('the file "{filepath}" should be in the git index as moved')
+@then('the file "{filepath}" should be staged as moved')
+def step_file_should_be_staged_as_renamed(context, filepath):
+    file_should_be_staged_with_change_type(context, filepath, "R")
+
+
+@then('the file "{filepath}" should be in the git index as modified')
+@then('the file "{filepath}" should be staged as modified')
+def step_file_should_be_staged_as_modified(context, filepath):
+    file_should_be_staged_with_change_type(context, filepath, "M")
+
+
+def file_should_be_staged_with_change_type(context, filepath, change_type):
+    assert_that(
+        [
+            d.a_path
+            for d in list(context.repo.index.diff("HEAD").iter_change_type(change_type))
+        ],
         has_item(filepath),
     )
+
+
+# -----------------------------------------------------------------------------
+# STEPS: Tracked/untracked files
+# -----------------------------------------------------------------------------
+@then('the file "{filepath}" should be tracked by git')
+def step_file_should_be_tracked(context, filepath):
+    assert_that(context.repo.untracked_files, not_(has_item(filepath)))
+
+
+@then('the file "{filepath}" should not be tracked by git')
+def step_file_should_not_be_tracked(context, filepath):
+    assert_that(context.repo.untracked_files, not_(has_item(filepath)))
 
 
 # -----------------------------------------------------------------------------
