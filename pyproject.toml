@@ -73,7 +73,7 @@ gitpython = "^3.1.1"
 [tool.poetry.dev-dependencies]
 tox = "^3.14"
 tox-pyenv = "^1.1"
-rope = "^0.14.0"
+rope = "^0.18.0"
 
 [tool.poetry.extras]
 test = ["pytest", "pytest-cov", "pytest-mock", "pytest-html", "pytest-asyncio", "mock"]
