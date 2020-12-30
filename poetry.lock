@@ -1109,7 +1109,7 @@ description = "A formatter for Python code."
 name = "yapf"
 optional = true
 python-versions = "*"
-version = "0.27.0"
+version = "0.30.0"
 
 [[package]]
 category = "main"
@@ -1134,7 +1134,7 @@ test = ["pytest", "pytest-cov", "pytest-mock", "pytest-html", "pytest-asyncio", 
 type = ["mypy"]
 
 [metadata]
-content-hash = "228bd7701596ad181d68bec7aac8114a2f4877e493e4cc7618515ea9ac52aa98"
+content-hash = "02e3ef4b3dd2893a487c343eae978d20a3d11e4ffda81824ef221d4eee5fe44d"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1689,8 +1689,8 @@ wrapt = [
     {file = "wrapt-1.11.2.tar.gz", hash = "sha256:565a021fd19419476b9362b05eeaa094178de64f8361e44468f9e9d7843901e1"},
 ]
 yapf = [
-    {file = "yapf-0.27.0-py2.py3-none-any.whl", hash = "sha256:613deba14233623ff3432d9d5032631b5f600be97b39f66932cbe67648bfa8ea"},
-    {file = "yapf-0.27.0.tar.gz", hash = "sha256:34f6f80c446dcb2c44bd644c4037a2024b6645e293a4c9c4521983dd0bb247a1"},
+    {file = "yapf-0.30.0-py2.py3-none-any.whl", hash = "sha256:3abf61ba67cf603069710d30acbc88cfe565d907e16ad81429ae90ce9651e0c9"},
+    {file = "yapf-0.30.0.tar.gz", hash = "sha256:3000abee4c28daebad55da6c85f3cd07b8062ce48e2e9943c8da1b9667d48427"},
 ]
 zipp = [
     {file = "zipp-3.1.0-py3-none-any.whl", hash = "sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b"},
