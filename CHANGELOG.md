@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.0...v0.3.1) (2020-12-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency pytest-asyncio to ^0.14.0 ([ac78e77](https://github.com/opinionated-digital-center/behave4git/commit/ac78e770c7974c84b8fff129d8523d210c2846ea))
+
 # [0.3.0](https://github.com/opinionated-digital-center/behave4git/compare/v0.2.0...v0.3.0) (2020-05-18)
 
 
