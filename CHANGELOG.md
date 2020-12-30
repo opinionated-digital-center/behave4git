@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.1...v0.3.2) (2020-12-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency sphinx_rtd_theme to ^0.5.0 ([f07417c](https://github.com/opinionated-digital-center/behave4git/commit/f07417c9777be552c5eff6fc4577a5d5ea5cde21))
+
 ## [0.3.1](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.0...v0.3.1) (2020-12-30)
 
 
