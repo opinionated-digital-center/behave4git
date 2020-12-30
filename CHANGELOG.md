@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.2...v0.3.3) (2020-12-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency yapf to ^0.30.0 ([fbf590d](https://github.com/opinionated-digital-center/behave4git/commit/fbf590d226e682f634033783088376137b47f845))
+
 ## [0.3.2](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.1...v0.3.2) (2020-12-30)
 
 
