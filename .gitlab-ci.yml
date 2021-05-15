@@ -97,7 +97,7 @@ semantic_release:
       when: never
     - if: $CI_COMMIT_BRANCH == "master"
       when: on_success
-  image: node:12-buster
+  image: node:16-buster
   before_script:
     - make setup-cicd-release-stage
     - . $HOME/.poetry/env
