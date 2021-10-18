@@ -51,7 +51,7 @@ yapf = {version = "^0.30.0", optional = true}
 # Optional dependencies to be part of `type` extra
 mypy = {version = "^0.740.0", optional = true}
 # Optional dependencies to be part of `format` extra
-isort = {version = "^4.3", optional = true}
+isort = {version = "^5.9", optional = true}
 seed-isort-config = {version = "^1.9.3", optional = true}
 black = {version = "stable", optional = true, allow-prereleases = true}
 # Optional dependencies to be part of `docs` extra
