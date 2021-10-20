@@ -20,9 +20,25 @@ def step_an_empty_git_repo(context):
     command_util.ensure_context_attribute_exists(context, "repo", repo)
 
 
+@given('an empty git repo with "{initial_branch}" as initial branch')
+def step_an_empty_git_repo_with_initial_branch(context, initial_branch):
+    step_a_new_working_directory(context)
+    repo = Repo.init(context.workdir, initial_branch=initial_branch)
+    command_util.ensure_context_attribute_exists(context, "repo", repo)
+
+
 @given("a starting git repo")
 def step_a_starting_git_repo(context):
-    step_an_empty_git_repo(context)
+    step_an_empty_git_repo_with_initial_branch(context, "main")
+    context.surrogate_text = "foo bar"
+    step_a_file_named_filename_with(context, "initial_commit_file")
+    step_add_file_to_index(context, "initial_commit_file")
+    step_commit_index_with_message(context, "chore: initial commit")
+
+
+@given('a starting git repo with "{initial_branch}" as initial branch')
+def step_a_starting_git_repo_with_initial_branch(context, initial_branch):
+    step_an_empty_git_repo_with_initial_branch(context, initial_branch)
     context.surrogate_text = "foo bar"
     step_a_file_named_filename_with(context, "initial_commit_file")
     step_add_file_to_index(context, "initial_commit_file")
