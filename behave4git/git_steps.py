@@ -106,7 +106,8 @@ def step_commit_index_with_message(context, message):
 @then('the file "{filepath}" should be staged')
 def step_file_should_be_staged(context, filepath):
     assert_that(
-        [d.a_path for d in context.repo.index.diff("HEAD")], has_item(filepath),
+        [d.a_path for d in context.repo.index.diff("HEAD")],
+        has_item(filepath),
     )
 
 
@@ -114,7 +115,8 @@ def step_file_should_be_staged(context, filepath):
 @then('the file "{filepath}" should not be staged')
 def step_file_should_not_be_staged(context, filepath):
     assert_that(
-        [d.a_path for d in context.repo.index.diff("HEAD")], not_(has_item(filepath)),
+        [d.a_path for d in context.repo.index.diff("HEAD")],
+        not_(has_item(filepath)),
     )
 
 
