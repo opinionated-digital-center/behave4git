@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.3...v0.4.0) (2021-10-20)
+
+
+### Features
+
+* can choose initial branch and default initial branch tested is `main` ([6433af2](https://github.com/opinionated-digital-center/behave4git/commit/6433af2a62f4417365d49f1057cbfe9a6298d7c9))
+
 ## [0.3.3](https://github.com/opinionated-digital-center/behave4git/compare/v0.3.2...v0.3.3) (2020-12-30)
 
 
