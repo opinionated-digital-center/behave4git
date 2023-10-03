@@ -11,7 +11,7 @@ workflow:
       when: never
 
 default:
-  image: python:3.7
+  image: python:3.12
 
 stages:
   - test
@@ -32,7 +32,7 @@ stages:
 
 py38:
   stage: test
-  image: python:3.8
+  image: python:3.12
   before_script:
     - *install_tox_and_poetry
   script:
@@ -47,7 +47,7 @@ py37:
 
 py36:
   stage: test
-  image: python:3.6
+  image: python:3.12
   before_script:
     - *install_tox_and_poetry
   script:
